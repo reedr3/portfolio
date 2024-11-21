@@ -1,15 +1,12 @@
-# fly.toml app configuration file generated for server-crimson-wind-6670 on 2024-11-08T16:08:30-05:00
+# fly.toml app configuration file generated for ryker-reed on 2024-11-21T12:54:55-05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'server-crimson-wind-6670'
+app = 'ryker-reed'
 primary_region = 'bos'
 
 [build]
-
-[env]
-  PORT = "3000"
 
 [http_service]
   internal_port = 3000
