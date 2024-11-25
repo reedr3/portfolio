@@ -9,12 +9,16 @@ export interface NavBarProps {
 function App() {
   const [currentTab, setCurrentTab] = useState(0);
 
+  function handleCurrentTabUpdate(newCurrentTab: number) {
+    setCurrentTab(newCurrentTab);
+  }
+
   return (
     <>
       <div>
-        <NavBar setCurrentTab={() => {setCurrentTab}}/>
+        <NavBar setCurrentTab={handleCurrentTabUpdate}/>
       </div>
-      <div>hello world</div>
+      <div>hello world {currentTab}</div>
     </>
   );
 }
