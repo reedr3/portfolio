@@ -1,42 +1,878 @@
-#root {
-  max-width: 1280px;
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+ html { background: #666; }
+ body { margin: 0px; }
+
+/* General wrapper for each component's contents */
+ .container {
+   position: relative;
+   margin: 0 auto;
+   width: 94%;
+   max-width: 1100px;
+   font-family: 'Lato', sans-serif;
+ }
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Header Component Styling */
+ #header {
+   z-index: 2;
+   position: fixed;
+   width: 100%;
+   height: 100px;
+   line-height: 60px;
+   background: #222;
+   color: #0d83d8;
+ }
+ #header img {
+   position: absolute;
+   left: 0;
+   width: 14%;
+   height: 90px;
+   margin-top: 5px;
+   border-radius: 10px;
+ }
+ #header img:hover {
+   opacity: 0.7;
+ }
+
+ #header #nav {
+   position: absolute;
+   right: 0;
+ }
+ #header #nav li {
+   float: left;
+   list-style: none;
+ }
+ #header #nav li a.current-category {
+   display: block;
+   font-size: 1.5em;
+   font-weight: bold;
+   color: #0d83d8;
+   text-decoration: none;
+   padding: 0 10px;
+   border-bottom: 3px solid #0d83d8;
+ }
+ #header #nav li a.not-current-category {
+   display: block;
+   font-size: 1.5em;
+   color: #0d83d8;
+   text-decoration: none;
+   padding: 0 10px;
+ }
+ #header #nav li a.not-current-category:hover {
+   opacity: 0.7;
+ }
+
+
+
+ /*--------------------------------------------------------------------------------------------------------*/
+ /*--------------------------------------------------------------------------------------------------------*/
+ /* Content Component Styling */
+ #content {
+   position: relative;
+   width: 100%;
+   padding-top: 120px;
+ }
+
+
+
+ /*--------------------------------------------------------------------------------------------------------*/
+ /*--------------------------------------------------------------------------------------------------------*/
+ /* Footer Component Styling */
+ #footer {
+   z-index: 2;
+   position: relative;
+   width: 100%;
+   height: 100px;
+   background: #222;
+   color: #0d83d8;
+ }
+#footer p { text-align: center;}
+#footer #icons {
+  width: 20%;
   margin: 0 auto;
-  padding: 2rem;
+  text-align: center;
+}
+/* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25%;
+    display: inline-block;
+    margin: 10px 2% 0px 3%;
+}
+
+/* Add a hover effect */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+.fa-linkedin {
+    background: #0077B5;
+    color: white;
+}
+
+.fa-github {
+    background: #333;
+    color: white;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Individual Content Pages */
+
+/*--------------------------------------------------------------------------------------------------------*/
+/* Projects */
+#projects {
+  width: 100%;
+}
+.project {
+  position: relative;
+  width: 46%;
+  margin-left: 2.5%;
+  margin-bottom: 40px;
+  display: inline-block;
+  border-radius: 10px;
+}
+.project h1 {
+  color: white;
+  text-align: center;
+}
+.project img.image-with-modal {
+  width: 80%;
+  height: 300px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.project img.image-with-modal:hover {
+  opacity: 0.7;
+}
+.project div.external-links {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.project a {
+  display: inline-block;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 2%;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-decoration: none;
+}
+.project a:link, .project a:visited, .project a:hover, .project a:active {
+  color: white;
+}
+.project a:hover {
+  opacity: 0.7;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/* Hobbies and Teaching */
+#hobbies, #teaching-experiences {
+  width: 100%;
+}
+.hobby-teaching {
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+  display: block;
+}
+.hobby-teaching h1 {
+  color: white;
+  text-align: center;
+}
+.hobby-teaching img.image-with-modal {
+  width: 50%;
+  height: 350px;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hobby-teaching img.image-with-modal:hover {
+  opacity: 0.7;
+}
+.hobby-teaching div.ht-description {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 2%;
+}
+.hobby-teaching p {
+  color: white;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/* Publications */
+#publications {
+  width: 100%;
+}
+.publication {
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+  display: block;
+}
+.publication h1 {
+  color: white;
+  text-align: center;
+}
+.publication img.image-with-modal {
+  width: 27%;
+  height: 400px;
+  margin-left: 12%;
+  margin-right: 8%;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.publication img.image-with-modal:hover {
+  opacity: 0.7;
+}
+.publication div.publication-description {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px 0 0 4%;
+}
+.publication p {
+  color: white;
+  font-size: 1.26em;
+}
+.publication div.external-links {
+  width: 80%;
+  margin: 0 0 0 8%;
+  text-align: center;
+}
+.publication a {
+  display: inline-block;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 2%;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-decoration: none;
+}
+.publication a:link, .publication a:visited, .publication a:hover, .publication a:active {
+  color: white;
+}
+.project a:hover {
+  opacity: 0.7;
+}
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/* Contact Form */
+#contact {
+  width: 100%;
+}
+#contact h1 {
+  text-align: center;
+  color: white;
+}
+#contact #contact-details {
+  width: 100%;
+  text-align: center;
+}
+#contact p {
+  margin: 0 auto;
+  padding: 0 25px;
+  color: #222;
+  display: inline-block;
+  font-size: 1.5em;
+}
+#contact form {
+  position: relative;
+  width: 60%;
+  height: 450px;
+  margin: 10px auto;
+  margin-bottom: 40px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #444;
+  color: white;
+}
+#contact label {
+  font-size: 1.5em;
+  font-family: "Lato";
+  margin: 0 10px;
+  vertical-align: top;
+}
+#contact input, #contact textarea {
+  font-size: 1.5em;
+  font-family: "Lato";
+  vertical-align: top;
+  background-color: #222;
+  color: white;
+  padding: 5px;
+  border: none;
+}
+#contact div {
+  width: 70%;
+  margin: 20px auto;
+}
+#contact #form-name input {
+  width: 70%;
+}
+#contact #form-email input {
+  width: 70%;
+  margin-left: 1%;
+}
+#contact #form-message textarea {
+  width: 70%;
+  height: 150px;
+  margin-top: 15px;
+  margin-left: 20%;
+}
+#contact button {
+  background-color: #222;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 10px;
+  margin: 20px 18%;
+  padding: 5px;
+}
+#contact button:hover {
+  opacity: 0.7;
+}
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/* About */
+#about {
+  width: 100%;
+  color: white;
+}
+#about img:hover {
+  opacity: 0.7;
+}
+#about h1 {
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: solid 2px white;
+}
+#intro img {
+  float: left;
+  border-radius: 50px;
+}
+#intro p {
+  padding-top: 30px;
+  margin-left: 350px;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+#skills-cloud {
+  margin-top: 110px;
+}
+.skill-group {
+  margin: 10px auto;
+  display: block;
+  width: 95%;
+  max-width: 1100px;
+  text-align: center;
+}
+#skills-cloud p {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 2%;
+  font-weight: bold;
+  background-color: #0d83d8;
+  border: 3px solid #fff;
+}
+#skills-cloud p:hover{-ms-animation:wiggle .3s 2;-moz-animation:wiggle .3s 2;-webkit-animation:wiggle .3s 2;animation:wiggle .3s 2;}
+@-ms-keyframes wiggle{0%{-ms-transform:rotate(3deg);}50%{-ms-transform:rotate(-3deg);}100%{-ms-transform:rotate(3deg);}}
+@-moz-keyframes wiggle{0%{-moz-transform:rotate(3deg);}50%{-moz-transform:rotate(-3deg);}100%{-moz-transform:rotate(3deg);}}
+@-webkit-keyframes wiggle{0%{-webkit-transform:rotate(3deg);}50%{-webkit-transform:rotate(-3deg);}100%{-webkit-transform:rotate(3deg);}}
+@keyframes wiggle{0%{transform:rotate(3deg);}50%{transform:rotate(-3deg);}100%{transform:rotate(3deg);}}
+
+#top-skills {
+  font-size: 2em;
+}
+#middle-skills {
+  font-size: 1.6em;
+}
+#bottom-skills {
+  font-size: 1.2em;
+}
+#testimonials {
+  margin-top: 50px;
+}
+.testimonial {
+  margin-bottom: 5px;
+}
+.testimonial img {
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+}
+.testimonial p {
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+.dialog {
+  width: 80%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+.head-and-name {
+  width: 18%;
+  display: inline-block;
+  margin: 0 1%;
+}
+.head-and-name h3 {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* Modal Styling */
+
+/* The Modal (background) */
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    padding-top: 20px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.985); /* Black w/ opacity */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Modal Title */
+.p-modal-title {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
+  color: white;
+  padding: 0 0 20px 0;
+  height: 20px;
+}
+
+/* Modal Image */
+.p-modal-image {
+    margin: 10px auto;
+    display: block;
+    width: 50%;
+    height: 420px;
+    max-width: 900px;
+}
+
+/* Modal Logo Image */
+.modal-logo {
+  margin-top: 20px;
+  height: 250px;
+  max-width: 350px;
+}
+
+/* Caption for each individual image in modal */
+.p-modal-image-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  height: 40px;
+}
+
+/* Caption of Modal - Same Width as the Image */
+.p-modal-text {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    color: white;
+    font-size: 1.4em;
+    padding: 20px 0;
+    height: 180px;
+}
+
+/* Skills used to make project (listed under modal caption)*/
+.p-modal-skills {
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+}
+.p-modal-skills p {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 2%;
+  font-size: 1.8em;
+  color: #0d83d8;
+  font-weight: bold;
+  border: 1px solid #0d83d8;
+}
+
+/* Hobby Teaching Modal */
+.ht-modal-image {
+    margin: 20px auto;
+    display: block;
+    width: 50%;
+    height: 500px;
+    max-width: 900px;
+}
+
+/* Publication Modal */
+.pub-modal-image {
+    margin: 20px auto;
+    display: block;
+    width: 50%;
+    height: 480px;
+    max-width: 360px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.p-modal-title, .p-modal-image, .p-modal-text, .p-modal-skills, .ht-modal-image, .pub-modal-image, .p-modal-image-caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Left/Right Buttons */
+.left {
+    position: absolute;
+    top: 300px;
+    left: 70px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.right {
+    position: absolute;
+    top: 300px;
+    right: 70px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.left:hover,
+.left:focus,
+.right:hover,
+.right:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/* Media Queries */
+
+/* media query to make styling look nice between 800 and 1100 pixels wide */
+@media (min-width: 840px) and (max-width: 1100px) {
+  /* About Page */
+  .testimonial img {
+    height: 140px;
+    width: 140px;
   }
-  to {
-    transform: rotate(360deg);
+  .testimonial p {
+    font-size: 1em;
+    line-height: 1.3;
+  }
+  .dialog {
+    width: 70%;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* media query for below 900px */
+@media (max-width: 889px) {
+  /* Contact Page */
+  #contact p {
+    font-size: 1.3em;
+  }
+  #contact form {
+    width: 80%;
   }
 }
 
-.card {
-  padding: 2em;
+/* media query for below 840px */
+@media (max-width: 839px) {
+  /* Header and Footer */
+  #header {
+    height: 145px;
+  }
+  #header img {
+    height: 70px;
+    margin-top: 15px;
+  }
+  #header #nav {
+    width: 85%;
+  }
+  #header #nav li a.current-category {
+    font-size: 1.3em;
+    border-bottom: 3px solid #0d83d8;
+  }
+  #header #nav li a.not-current-category {
+    font-size: 1.3em;
+    border-bottom: 3px solid #222;
+  }
+
+  #content {
+    padding-top: 155px;
+  }
+
+ #footer #icons {
+   width: 40%;
+ }
+
+  /* About Page */
+  #intro img {
+    margin-top: 20px;
+  }
+  .testimonial img {
+    height: 90px;
+    width: 90px;
+  }
+  .testimonial p {
+    font-size: .8em;
+    line-height: 1.1;
+  }
+  .dialog {
+    width: 70%;
+  }
+
+  /* Projects Page */
+  .project img.image-with-modal {
+    height: 200px;
+  }
+
+  /* Modals */
+  .p-modal-image {
+      width: 60%;
+      height: 380px;
+  }
+  .ht-modal-image {
+      width: 60%;
+      height: 430px;
+  }
+  .pub-modal-image {
+      height: 440px;
+  }
+  .modal-logo {
+    height: 210px;
+    max-width: 300px;
+  }
+  .p-modal-text {
+      font-size: 1.2em;
+      height: 200px;
+  }
+  .left {
+      top: 200px;
+  }
+  .right {
+      top: 200px;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+/* media query for below 700px */
+@media (max-width: 699px) {
+  /* Header and Footer */
+  #header img {
+    height: 50px;
+    margin-top: 20px;
+  }
+
+  /* About Page */
+  #intro img {
+    float: none;
+  }
+  #intro p {
+    padding-top: 10px;
+    margin-left: 20px;
+    font-size: 1.3em;
+    line-height: 1.3;
+  }
+
+  /* Hobbies and Teaching Pages */
+  .hobby-teaching img.image-with-modal {
+    width: 80%;
+    height: 350px;
+  }
+  .hobby-teaching div.ht-description {
+    width: 80%;
+    margin: 15px 0 0 0;
+  }
+  .hobby-teaching p {
+    font-size: 1.3em;
+  }
+
+  /* Publications Page */
+  .publication img.image-with-modal {
+    width: 40%;
+    height: 300px;
+    margin: auto;
+    display: block;
+  }
+
+  .publication div.publication-description {
+    width: 80%;
+    display: block;
+    margin: 5px auto;
+  }
+  .publication p {
+    font-size: 1.1em;
+  }
+
+  /* Contact Page */
+  #contact p {
+    font-size: 1.1em;
+  }
+  #contact form {
+    width: 90%;
+  }
+
+  /* Modals */
+  .p-modal-image {
+      width: 70%;
+      height: 340px;
+  }
+  .ht-modal-image {
+      width: 70%;
+      height: 400px;
+  }
+  .modal-logo {
+    height: 210px;
+    max-width: 300px;
+  }
+  .p-modal-text {
+      font-size: 1.2em;
+      height: 200px;
+  }
+}
+
+/* media query for below 600px */
+@media (max-width: 599px) {
+  /* Projects Page */
+  .project img.image-with-modal {
+    height: 150px;
+  }
+
+  /* Contact Page */
+  #contact form {
+    height: 500px;
+  }
+  #contact #form-message textarea {
+    margin-left: 0;
+  }
+
+  /* Modals */
+  .p-modal-image {
+      width: 60%;
+      height: 280px;
+  }
+  .ht-modal-image {
+      width: 65%;
+      height: 340px;
+  }
+  .pub-modal-image {
+      height: 420px;
+  }
+  .modal-logo {
+    height: 190px;
+    max-width: 270px;
+  }
+  .p-modal-text {
+      font-size: 1em;
+      height: 180px;
+  }
 }
