@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <Header setCurrentTab={handleCurrentTabUpdate}/>
+      <Header setCurrentTab={handleCurrentTabUpdate} currentTab={currentTab} />
       <Content currentTab={currentTab}/>
       <Footer/>
     </>

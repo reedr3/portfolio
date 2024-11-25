@@ -1,23 +1,64 @@
 interface NavBarProps {
     setCurrentTab(tabNum: number): any;
+    currentTab: number;
 }
 
-function NavBar({setCurrentTab} : NavBarProps) {
-    function handleClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+function NavBar({setCurrentTab, currentTab} : NavBarProps) {
+    function handleClick(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
         e.preventDefault();
         let tabId = parseInt(e.currentTarget.id);
         setCurrentTab(tabId);
     }
 
+    function isCurrentTab(tabId: number) {
+        if(tabId == currentTab) {
+            return ("current-category");
+        }
+        else {
+            return ("not-current-category");
+        }
+    }
+
+    let tabsList = [
+        {
+            id: 0,
+            title: "About"
+        },
+        {
+            id: 1,
+            title: "Experience"
+        },
+        {
+            id: 2,
+            title: "Projects"
+        },
+        {
+            id: 3,
+            title: "Teaching"
+        },
+        {
+            id: 4,
+            title: "Publications"
+        },
+        {
+            id: 5,
+            title: "Hobbies"
+        },
+        {
+            id: 6,
+            title: "Contact"
+        },
+    ]
+
     return (
         <div>
-            <button id="0" onClick={(e) => {handleClick(e)}}>About</button>
-            <button id="1" onClick={(e) => {handleClick(e)}}>Experience</button>
-            <button id="2" onClick={(e) => {handleClick(e)}}>Projects</button>
-            <button id="3" onClick={(e) => {handleClick(e)}}>Teaching</button>
-            <button id="4" onClick={(e) => {handleClick(e)}}>Publications</button>
-            <button id="5" onClick={(e) => {handleClick(e)}}>Hobbies</button>
-            <button id="6" onClick={(e) => {handleClick(e)}}>Contact</button>
+            <nav id="nav">
+                <ul>
+                    {tabsList.map(function(tab) {
+                        return <li> <a id={tab.id.toString()} className={isCurrentTab(tab.id)} onClick={(e) => {handleClick(e)}}> {tab.title} </a> </li>
+                    })}
+                </ul>
+            </nav>
         </div>
     )
 }
