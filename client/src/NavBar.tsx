@@ -55,7 +55,7 @@ function NavBar({setCurrentTab, currentTab} : NavBarProps) {
             <nav id="nav">
                 <ul>
                     {tabsList.map(function(tab) {
-                        return <li> <a id={tab.id.toString()} className={isCurrentTab(tab.id)} onClick={(e) => {handleClick(e)}}> {tab.title} </a> </li>
+                        return <li key={tab.id.toString()}> <a id={tab.id.toString()} className={isCurrentTab(tab.id)} onClick={(e) => {handleClick(e)}}> {tab.title} </a> </li>
                     })}
                 </ul>
             </nav>
