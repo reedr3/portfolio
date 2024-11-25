@@ -3,6 +3,7 @@ import './App.css'
 import NavBar from './NavBar.tsx';
 import Footer from './Footer.tsx';
 import Header from './Header.tsx';
+import Content from './Content.tsx';
 
 function App() {
   const [currentTab, setCurrentTab] = useState(0);
@@ -14,7 +15,7 @@ function App() {
   return (
     <>
       <Header setCurrentTab={handleCurrentTabUpdate}/>
-      <div>hello world {currentTab}</div>
+      <Content currentTab={currentTab}/>
       <Footer/>
     </>
   );
