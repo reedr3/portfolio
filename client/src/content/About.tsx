@@ -24,7 +24,7 @@ function About() {
             <Testimonial
               name="Maria Uyeda"
               dialog="Ryker is an intelligent developer whose strength lies in his ability to solve complex problems through programming. He uses his vast understanding of algorithms and logic to creatively design products with a beautiful front-end and a clean back-end. I have worked on several teams with Ryker and witnessed his dedication for building meaningful programs that promote a more equal and just society. I would gladly work with Ryker again because of his programming expertise and his ability to bring a team together through strong leadership!"
-              headshot="https://media.licdn.com/media/AAEAAQAAAAAAAAd9AAAAJDE0YzI2YzBiLTI1NGUtNDAzMy04MTMxLWFjNzI3NzU5YmQzMg.jpg"
+              headshot="https://media.licdn.com/dms/image/v2/C5603AQHllIJS-Yk43w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1559189960877?e=1738195200&v=beta&t=M2nJKYAjAGdg9of3YT-iTJ2vWspYopq96IxJigA0Wfo"
               linkedin="https://www.linkedin.com/in/maria-uyeda/"
               textSide="left"
             />
@@ -32,7 +32,7 @@ function About() {
             <Testimonial
               name="Jim Lengel"
               dialog="I worked with Ryker on an intensive 2-week project when we were students at Dev Bootcamp. What impressed me most about Ryker was his ability to problem solve quickly and methodically. We were implementing a new feature in Rails (Action Cable) and he was able to read the limited documentation and get the feature working in a short period of time. Also, on our team, we had rotating project managers. When it was Ryker’s turn as manager, the team worked smoothly and communication was optimal. Everyone felt extremely confident in Ryker’s ability to lead our team. Ryker is intelligent, insightful, humble, and persistent. His work throughout the Dev Bootcamp program stood out as some of the best code of the group and he was always willing to explain difficult concepts to his cohort members. I would happily work on another project with Ryker in the future."
-              headshot="https://media.licdn.com/media/AAEAAQAAAAAAAAcyAAAAJGFkMmVmZjc1LTk3MGItNGEyMS1iODRiLTMxNzQ2NGUwYmZjMQ.jpg"
+              headshot="https://media.licdn.com/dms/image/v2/C5603AQHRrOL33aRo2w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1587566546816?e=1738195200&v=beta&t=N63kKHP08ab0B3bXFj1agSQM3e2yXjQn-ep2SeyjC94"
               linkedin="https://www.linkedin.com/in/jimlengel/"
               textSide="right"
             />
@@ -40,7 +40,7 @@ function About() {
             <Testimonial
               name="Frank Aiello"
               dialog="Ryker is a talented thinker who uses his sharp analytic skills to solve intricate problems. I worked with Ryker on building a web application that required him and me to research and implement a feature that used an alternative type of computer communications protocol that we were both previously unfamiliar with. Ryker and I spent days rethinking everything we had learned about how the Internet works, and in the process he demonstrated to me how to reason through novel problems by breaking them down into smaller parts and rigorously testing potential solutions to them. Ryker showed me through example how to explain structurally complex ideas to people on our team, and to this day I often recall the eloquence with which Ryker deconstructed issues in order to communicate them with people. His ability to do so makes him a valuable member of any team, not exclusively as a software engineer, but as a refreshingly unique thinker eager to take on problems through the lens of emerging alternatives."
-              headshot="https://media.licdn.com/media/AAEAAQAAAAAAAAhDAAAAJDBiMjVmYWFhLWM3NzItNDE3Yy1hY2QyLWZjZGNiM2YyMGI3OA.jpg"
+              headshot="https://media.licdn.com/dms/image/v2/C4D03AQFqz_At1Wiryg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1593622145101?e=1738195200&v=beta&t=Mc9-0XUJ0UOdY3ngHUEI3Rp0w4AWvMl_8I_Mg2UXUiw"
               linkedin="https://www.linkedin.com/in/frank-aiello-eyeyellow/"
               textSide="left"
             />
