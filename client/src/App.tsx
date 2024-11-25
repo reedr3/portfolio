@@ -1,10 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import NavBar from './NavBar.tsx';
-
-export interface NavBarProps {
-  setCurrentTab(tabNum: number): any;
-};
+import Footer from './Footer.tsx';
 
 function App() {
   const [currentTab, setCurrentTab] = useState(0);
@@ -15,6 +12,7 @@ function App() {
 
   return (
     <>
+      <Footer/>
       <div>
         <NavBar setCurrentTab={handleCurrentTabUpdate}/>
       </div>

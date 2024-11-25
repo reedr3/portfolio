@@ -1,4 +1,6 @@
-import { NavBarProps } from './App';
+interface NavBarProps {
+    setCurrentTab(tabNum: number): any;
+}
 
 function NavBar({setCurrentTab} : NavBarProps) {
     function handleClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
